@@ -28,6 +28,7 @@ namespace SIC43NT_Webserver.Pages
         public string flagTamperDecision = "N/A";
         public string rollingCodeDecision = "N/A";
         public string testName = "N/A";
+        public string counter = "N/A";
 
         public void OnGet(string d, string name)
         {
@@ -52,6 +53,10 @@ namespace SIC43NT_Webserver.Pages
             if(name != null)
             {
                 testName = name;
+            }
+            if(cnt != null)
+            {
+                counter = UInt32.Parse(cnt, System.Globalization.NumberStyles.HexNumber).ToString();
             }
         }
         private void result_agreement_check()
