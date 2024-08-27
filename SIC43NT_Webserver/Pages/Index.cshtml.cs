@@ -30,7 +30,7 @@ namespace SIC43NT_Webserver.Pages
         public string testName = "N/A";
         public string counter = "N/A";
 
-        public void OnGet(string d, string name)
+        public void OnGet(string d, string name, string cnt)
         {
             if (d is null)
             {
