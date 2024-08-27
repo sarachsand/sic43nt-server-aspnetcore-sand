@@ -27,8 +27,9 @@ namespace SIC43NT_Webserver.Pages
         public string timeStampDecision = "N/A";
         public string flagTamperDecision = "N/A";
         public string rollingCodeDecision = "N/A";
+        public string testName = "N/A";
 
-        public void OnGet(string d)
+        public void OnGet(string d, string name)
         {
             if (d is null)
             {
@@ -47,6 +48,10 @@ namespace SIC43NT_Webserver.Pages
                     rollingCodeServer = KeyStream.stream(default_key, timeStampTag_str, 4);
                     result_agreement_check();
                 }
+            }
+            if(name != null)
+            {
+                testName = name;
             }
         }
         private void result_agreement_check()
